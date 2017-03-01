@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="section row container">
+     <div class="collection-header">
+        <h2>{{page.title}}</h2>
+    </div>
+</div>
+
+<div class="container">
+  <ul class="grid effect-2" id="grid">
+    {% for photo in page.photos %}
+      <li><a href="{{photo.src_large}}" class="fancybox" rel="{{page.slug}}"><img src="{{photo.src}}"></a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="section row container">
+{% for photo in page.photos %}
+<div class="col three">
+	<div class="img-frame">
+		<div style="margin: auto; background: url('{{photo.src}}') no-repeat; background-size: auto; background-position: 50%; width: 213px; height: 213px;">
+    	<a href="{{photo.src_large}}" class="fancybox" rel="{{page.slug}}">
+	    	<img src="/images/blank.gif" width="213" height="213" />
+    	</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>

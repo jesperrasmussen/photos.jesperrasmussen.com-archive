@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="section row container">
+ <div class="collection-header">
+  <h2>{{page.title}}</h2>
+</div>
+</div>
+
+<ul class="grid" id="gallery-grid">
+  {% for photo in page.photos %}
+  <li>
+    <a href="{{photo.src_large}}" class="fancybox" rel="{{page.slug}}">
+      <img src="{{photo.src}}">
+    </a>
+  </div>
+</li>
+{% endfor %}
+</ul>
+
+<script>
+  new AnimOnScroll( document.getElementById( 'gallery-grid' ), {
+    minDuration : 0.4,
+    maxDuration : 0.7,
+    viewportFactor : 0.2
+  } );
+</script>

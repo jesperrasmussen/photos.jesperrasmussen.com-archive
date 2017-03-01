@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% assign prev_category = null %}
+
+<div class="section row container">
+{% for set in page.sets %}
+    {% if prev_category != set['category'] and !forloop.first %}
+</div>
+<div class="section row container">
+     <div class="collection-header">
+        <h2>{{set['category']}}</h2>
+    </div>
+</div>
+<div class="section row container">
+        {% assign prev_category = set['category'] %}
+    {% endif %}
+    <div class="col three">
+    	<div class="img-frame">
+    		<div style="margin: auto; background: url('{{set['primary_image'].src}}') no-repeat; background-size: auto; background-position: 50%; width: 213px; height: 213px;">
+        		<a href="{{set['path']}}">
+    	    		<img src="/images/blank.gif" width="213" height="213" />
+        		</a>
+        	</div>
+        	<a href="{{set['path']}}">
+        		<h5>{{set['title']}}</h5>
+        		<!--<div class="description">{{set['primary_image'].description}}</div>-->
+        	</a>
+        </div>
+    </div>
+{% endfor %}
+</div>
