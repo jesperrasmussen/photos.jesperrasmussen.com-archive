@@ -1,5 +1,32 @@
+.header {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  padding: 0.5em;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  letter-spacing: 0.05em;
+}
+.header h1 {
+  font-size: 300%;
+  font-weight: 100;
+  margin: 0;
+}
+.header h2 {
+  font-size: 125%;
+  font-weight: 100;
+  line-height: 1.5;
+  margin: 0;
+  color: #666;
+  letter-spacing: -0.02em;
+}
+
 .container {
   padding: 0 4.5%;
+}
+
+.content {
+  margin: 0 auto;
 }
 
 .gallery {
@@ -22,6 +49,6 @@
   z-index: 1;
 
   /* fixes overlap error in IE7/8, 
-     make sure you have an empty gif */
+  make sure you have an empty gif */
   background-image: url('empty.gif');
 } 

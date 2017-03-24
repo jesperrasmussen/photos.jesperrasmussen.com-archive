@@ -1,5 +1,6 @@
 body {
     color: #666;
+    background: #333333;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -35,7 +36,7 @@ h1,h2,h3,h4,h5,h6 {
 .photo-box, .text-box {
     overflow: hidden;
     position: relative;
-    height: 250px;
+    height: 200px;
     text-align: center;
     background-position: center center;
     background-repeat: no-repeat;
